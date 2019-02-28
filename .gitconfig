@@ -1,0 +1,21 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
+[user]
+	email = p-jerome@hotmail.fr
+	name = Jérôme Pogeant
+	signingkey = A05482AC48EBA4A8
+[gpg]
+	program = /usr/bin/gpg
+[commit]
+	gpgsign = true
+[submodule]
+	recurse = true
+[color]
+	ui = true
+[core]
+	editor = vim
+	excludesfile = /home/jerome/.gitignore_global

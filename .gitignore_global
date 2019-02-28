@@ -1,0 +1,6 @@
+.idea
+*.phar
+/coverage
+.DS_Store
+*.swp
+*~
