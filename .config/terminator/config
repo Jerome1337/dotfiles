@@ -1,0 +1,40 @@
+[global_config]
+  use_custom_url_handler = True
+[keybindings]
+  close_term = <Primary>w
+  full_screen = <Ctrl><Shift>F11
+[layouts]
+  [[default]]
+    [[[child1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = eb93c8eb-52ff-4c86-9f53-e2855f552217
+    [[[window0]]]
+      borderless = False
+      enable_real_transparency = True
+      force_no_bell = True
+      fullscreen = False
+      handle_size = 1
+      last_active_term = eb93c8eb-52ff-4c86-9f53-e2855f552217
+      last_active_window = True
+      maximise = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 1920:25
+      size = 2560, 1389
+      title = ~
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#839496"
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    scrollback_lines = 10000
+    show_titlebar = False
