@@ -30,11 +30,11 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#002b36"
+    background_color = "#242424"
     background_darkness = 0.85
     background_type = transparent
-    cursor_color = "#aaaaaa"
-    foreground_color = "#839496"
-    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    cursor_color = "#97979b"
+    foreground_color = "#eff0eb"
+    palette = "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
     scrollback_lines = 10000
     show_titlebar = False
