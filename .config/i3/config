@@ -3,7 +3,7 @@ exec --no-startup-id /$HOME/.screenlayout/config.sh
 
 set $mod Mod4
 
-new_window pixel 1
+new_window none
 new_float normal
 
 hide_edge_borders none
@@ -16,7 +16,9 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec terminator 
+focus_follows_mouse no
+
+bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+l exec i3lock --color 000000
@@ -55,10 +57,12 @@ set $ws6 6
 set $ws7 7
 set $ws8 8
 
-workspace $ws1 output DP-2 layout split
-workspace $ws2 output DP-1 layout tabbed
-workspace $ws3 output DP-2 layout tabbed
-workspace $ws4 output DP-1 layout tabbed
+workspace $ws1 output DP-2
+workspace $ws2 output DP-1
+workspace $ws3 output DP-2
+workspace $ws4 output DP-1
+
+workspace_layout tabbed
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -133,6 +137,8 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 exec --no-startup-id firefox
 exec --no-startup-id terminator
+exec --no-startup-id phpstorm
+exec --no-startup-id goland
 exec --no-startup-id slack
 
 # Theme colors
