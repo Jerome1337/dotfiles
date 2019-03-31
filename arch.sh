@@ -68,6 +68,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Docker setup
 sudo systemctl start docker.service
+sudo systemctl enable docker.service
 sudo gpasswd -a $(whoami) docker
 
 if [[ ! -a $HOME/.oh-my-zsh ]]; then
