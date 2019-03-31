@@ -64,9 +64,9 @@ exec --no-startup-id slack
 exec --no-startup-id mate-power-manager
 
 # Theme colors
-client.focused $yellow $light-grey $yellow
-client.focused_inactive $yellow #grey $yellow
-client.unfocused $yellow $dark-grey $yellow
+client.focused $light-grey $light-grey $yellow
+client.focused_inactive $grey #grey $yellow
+client.unfocused $dark-grey $dark-grey $yellow
 client.urgent $red $red $dark-grey
 client.background $dark-grey
 
