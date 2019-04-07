@@ -53,11 +53,12 @@ yaourt -S --noconfirm nodejs \
     snapd \
     steam
 
-sudo snap install goland --classic \
-    phpstorm --classic \
-    slack --classic \
-    spotify \
-    webstorm --classic
+sudo snap install spotify
+
+for package in goland phpstorm slack webstorm
+do
+    sudo snap install ${package} --classic
+done
 
 # Switch keyboard keymap
 echo "KEYMAP=fr" > sudo /etc/vconsole.conf
@@ -97,4 +98,4 @@ ln -sf $HOME/dotfiles/.config/terminator/config $HOME/.config/terminator/config
 
 sudo chsh -s /bin/zsh $(whoami)
 
-#sudo reboot
+sudo reboot
