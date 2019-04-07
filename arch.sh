@@ -62,6 +62,9 @@ yaourt -S --noconfirm nodejs \
     snapd \
     steam
 
+sudo systemctl start snapd && \
+    systemctl enable -f snapd
+
 sudo snap install spotify
 
 for package in goland phpstorm slack webstorm
