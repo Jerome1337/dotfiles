@@ -2,7 +2,11 @@
 
 set -e
 
-sudo pacman -Syu --noconfirm alsa-utils \
+useradd -m -g users -G wheel,storage,power -s /bin/bash jerome
+
+passwd jerome
+
+pacman -Syu --noconfirm alsa-utils \
     asciiquarium \
     compton \
     docker \
@@ -25,6 +29,7 @@ sudo pacman -Syu --noconfirm alsa-utils \
     rofi \
     rxvt-unicode \
     screenfetch \
+    sudo \
     terminator \
     ttf-dejavu \
     vim \
@@ -35,6 +40,10 @@ sudo pacman -Syu --noconfirm alsa-utils \
     xdotool \
     xscreensaver \
     zsh
+
+visudo
+
+su - jerome
 
 # Setup Yaourt
 git clone https://aur.archlinux.org/package-query.git && \
