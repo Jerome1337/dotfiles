@@ -67,6 +67,8 @@ sudo systemctl start snapd && \
 
 sudo snap install spotify
 
+sudo ln -sf /var/lib/snapd/snapd /snap
+
 for package in goland phpstorm slack webstorm
 do
     sudo snap install ${package} --classic
@@ -100,12 +102,16 @@ git clone https://github.com/Jerome1337/dotfiles.git
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/.gitignore_global $HOME/.gitignore_global
+
+mkdir -p $HOME/.config/i3
 ln -sf $HOME/dotfiles/.config/i3/config $HOME/.config/i3/config
+
+mkdir $HOME/.config/polybar
 ln -sf $HOME/dotfiles/.config/polybar/config $HOME/.config/polybar/config
 ln -sf $HOME/dotfiles/.config/polybar/bar_launch.sh $HOME/.config/polybar/bar_launch.sh
 ln -sf $HOME/dotfiles/lockscreen.sh $HOME/lockscreen.sh
 
-mkdir -p $HOME/.config/terminator $HOME/.config/polybar
+mkdir $HOME/.config/terminator
 ln -sf $HOME/dotfiles/.config/terminator/config $HOME/.config/terminator/config
 
 sudo chsh -s /bin/zsh $(whoami)
