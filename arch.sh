@@ -43,7 +43,7 @@ pacman -Syu --noconfirm alsa-utils \
 
 visudo
 
-su - jerome
+su - jerome <<EOSU
 
 # Setup Yaourt
 git clone https://aur.archlinux.org/package-query.git && \
@@ -120,4 +120,6 @@ ln -sf $HOME/dotfiles/.config/terminator/config $HOME/.config/terminator/config
 
 sudo chsh -s /bin/zsh $(whoami)
 
-sudo reboot
+EOSU
+
+reboot
