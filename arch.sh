@@ -99,6 +99,10 @@ sudo systemctl enable NetworkManager
 
 git clone https://github.com/Jerome1337/dotfiles.git
 
+ln -sf $HOME/dotfiles/.Xresources $HOME/.Xresources
+ln -sf $HOME/dotfiles/.xinitrc $HOME/.xinitrc
+ln -sf $HOME/dotfiles/.profile $HOME/.profile
+ln -sf $HOME/dotfiles/.zprofile $HOME/.zprofile
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/.gitignore_global $HOME/.gitignore_global
