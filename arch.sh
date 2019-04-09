@@ -10,6 +10,7 @@ pacman -Syu --noconfirm alsa-utils \
     asciiquarium \
     compton \
     docker \
+    docker-compose \
     firefox \
     fzf \
     git \
@@ -32,11 +33,13 @@ pacman -Syu --noconfirm alsa-utils \
     sudo \
     terminator \
     ttf-dejavu \
+    udisks2 \
     vim \
     xclip \
     xorg-server \
     xorg-xinit \
     xorg-xrdb \
+    xorg-xrandr \
     xdotool \
     xscreensaver \
     zsh
@@ -56,18 +59,19 @@ git clone https://aur.archlinux.org/package-query.git && \
     cd .. && \
     rm -rf package-query yaourt
 
-yaourt -S --noconfirm nodejs \
+yaourt -S --noconfirm i3lock-fancy-git \
+    nodejs \
     nerd-fonts-complete \
     polybar \
     snapd \
-    steam
+    zplug
 
 sudo systemctl start snapd && \
     systemctl enable -f snapd
 
 sudo snap install spotify
 
-sudo ln -sf /var/lib/snapd/snapd /snap
+sudo ln -sf /var/lib/snapd/snap /snap
 
 for package in goland phpstorm slack webstorm
 do
@@ -99,6 +103,7 @@ sudo systemctl enable NetworkManager
 
 git clone https://github.com/Jerome1337/dotfiles.git
 
+ln -sf $HOME/dotfiles/.screenlayout $HOME/.screenlayout
 ln -sf $HOME/dotfiles/.Xresources $HOME/.Xresources
 ln -sf $HOME/dotfiles/.xinitrc $HOME/.xinitrc
 ln -sf $HOME/dotfiles/.profile $HOME/.profile
