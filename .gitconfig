@@ -7,7 +7,7 @@
 [user]
 	email = p-jerome@hotmail.fr
 	name = Jérôme Pogeant
-	signingkey = A05482AC48EBA4A8
+	signingkey = F3FF4145E9ADF771
 [gpg]
 	program = /usr/bin/gpg
 [commit]
