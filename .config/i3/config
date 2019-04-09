@@ -4,10 +4,10 @@ exec --no-startup-id $HOME/.screenlayout/config.sh
 # Variables
 set $mod Mod4
 
-set $ws1 1: terminal
-set $ws2 2: web
-set $ws3 3: editor
-set $ws4 4: slack
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
@@ -74,7 +74,7 @@ client.background $dark-grey
 bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+l workspace 8; exec $HOME/lockscreen.sh
+bindsym $mod+l exec i3lock-fancy
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
