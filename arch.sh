@@ -20,10 +20,12 @@ pacman -Syu --noconfirm alsa-utils \
     i3-gaps \
     i3status \
     networkmanager \
+    networkmanager-openconnect \
     networkmanager-vpnc \
     nitrogen \
     ntfs-3g \
     numlockx \
+    openconnect \
     openssh \
     os-prober \
     playerctl \
@@ -63,8 +65,7 @@ yaourt -S --noconfirm i3lock-fancy-git \
     nodejs \
     nerd-fonts-complete \
     polybar \
-    snapd \
-    zplug
+    snapd
 
 sudo systemctl start snapd && \
     systemctl enable -f snapd
