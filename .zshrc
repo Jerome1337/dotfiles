@@ -46,4 +46,4 @@ PROMPT=" $PROMPT"
 
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source ~/.zplug/init.zsh
+screenfetch
