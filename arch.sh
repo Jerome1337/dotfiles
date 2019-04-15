@@ -61,7 +61,8 @@ git clone https://aur.archlinux.org/package-query.git && \
     cd .. && \
     rm -rf package-query yaourt
 
-yaourt -S --noconfirm i3lock-fancy-git \
+yaourt -S --noconfirm google-chrome \
+    i3lock-fancy-git \
     nodejs \
     nerd-fonts-complete \
     polybar \
