@@ -19,6 +19,7 @@ pacman -Syu --noconfirm alsa-utils \
     htop \
     i3-gaps \
     i3status \
+    linux-headers \
     networkmanager \
     networkmanager-openconnect \
     networkmanager-vpnc \
@@ -37,6 +38,8 @@ pacman -Syu --noconfirm alsa-utils \
     ttf-dejavu \
     udisks2 \
     vim \
+    virtualbox-host-modules-arch \
+    virtualbox \
     xclip \
     xorg-server \
     xorg-xinit \
@@ -71,11 +74,17 @@ yaourt -S --noconfirm google-chrome \
 sudo systemctl start snapd && \
     systemctl enable -f snapd
 
+# Install Minikube
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+    && chmod +x minikube
+sudo cp minikube /usr/local/bin \
+    && rm minikube
+
 sudo snap install spotify
 
 sudo ln -sf /var/lib/snapd/snap /snap
 
-for package in goland phpstorm slack webstorm
+for package in goland helm kubectl phpstorm slack webstorm
 do
     sudo snap install ${package} --classic
 done
