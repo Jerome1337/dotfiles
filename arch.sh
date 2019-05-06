@@ -9,6 +9,7 @@ passwd jerome
 pacman -Syu --noconfirm alsa-utils \
     asciiquarium \
     compton \
+    dep \
     docker \
     docker-compose \
     firefox \
@@ -64,7 +65,8 @@ git clone https://aur.archlinux.org/package-query.git && \
     cd .. && \
     rm -rf package-query yaourt
 
-yaourt -S --noconfirm google-chrome \
+yaourt -S --noconfirm go-ling-git
+    google-chrome \
     i3lock-fancy-git \
     nodejs \
     nerd-fonts-complete \
