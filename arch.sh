@@ -41,6 +41,7 @@ pacman -Syu --noconfirm alsa-utils \
     vim \
     virtualbox-host-modules-arch \
     virtualbox \
+    whois \
     xclip \
     xorg-server \
     xorg-xinit \
