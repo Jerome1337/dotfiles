@@ -137,6 +137,8 @@ ln -sf $HOME/dotfiles/lockscreen.sh $HOME/lockscreen.sh
 mkdir $HOME/.config/terminator
 ln -sf $HOME/dotfiles/.config/terminator/config $HOME/.config/terminator/config
 
+echo static "domain_name_servers=8.8.8.8 1.1.1.1" | sudo tee -a /etc/dhcpcd.conf
+
 sudo chsh -s /bin/zsh $(whoami)
 
 EOSU
