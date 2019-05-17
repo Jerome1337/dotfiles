@@ -25,6 +25,7 @@ pacman -Syu --noconfirm alsa-utils \
     networkmanager-openconnect \
     networkmanager-vpnc \
     nitrogen \
+    npm \
     ntfs-3g \
     numlockx \
     openconnect \
