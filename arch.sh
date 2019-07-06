@@ -32,6 +32,8 @@ pacman -Syu --noconfirm alsa-utils \
     openssh \
     os-prober \
     playerctl \
+    python \
+    python-pip \
     rofi \
     rxvt-unicode \
     screenfetch \
@@ -88,7 +90,7 @@ sudo snap install spotify
 
 sudo ln -sf /var/lib/snapd/snap /snap
 
-for package in goland helm kubectl phpstorm slack webstorm
+for package in goland helm kubectl phpstorm pycharm-professional slack webstorm
 do
     sudo snap install ${package} --classic
 done
