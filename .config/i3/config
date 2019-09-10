@@ -58,8 +58,6 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/bar_launch.sh
 exec --no-startup-id firefox
 exec --no-startup-id terminator
-exec --no-startup-id phpstorm
-exec --no-startup-id goland
 exec --no-startup-id slack
 exec --no-startup-id mate-power-manager
 
