@@ -1,6 +1,12 @@
 #!/bin/sh
 
-set -e
+set -eif [[ ! -x "$(command -v yay)" ]]; then
+  cd /tmp
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg --syncdeps --install --noconfirm
+  cd ${HOME}
+fi
 
 useradd -m -g users -G wheel,storage,power -s /bin/bash jerome
 
@@ -8,6 +14,8 @@ passwd jerome
 
 pacman -Syu --noconfirm alsa-utils \
     asciiquarium \
+    base-devel \
+    code \
     compton \
     dep \
     docker \
@@ -58,20 +66,18 @@ visudo
 
 su - jerome <<EOSU
 
-# Setup Yaourt
-git clone https://aur.archlinux.org/package-query.git && \
-    cd package-query && \
-    makepkg -si --noconfirm && \
-    cd .. && \
-    git clone https://aur.archlinux.org/yaourt.git && \
-    cd yaourt && \
-    makepkg -si --noconfirm && \
-    cd .. && \
-    rm -rf package-query yaourt
+# Setup Yay
+if [[ ! -x "$(command -v yay)" ]]; then
+  cd /tmp
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg --syncdeps --install --noconfirm
+  cd ${HOME}
+fi
 
-yaourt -S --noconfirm go-ling-git
-    google-chrome \
+yay -S --noconfirm google-chrome \
     i3lock-fancy-git \
+    keybase-bin \
     nodejs \
     nerd-fonts-complete \
     polybar \
@@ -86,11 +92,11 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 sudo cp minikube /usr/local/bin \
     && rm minikube
 
-sudo snap install spotify
-
 sudo ln -sf /var/lib/snapd/snap /snap
 
-for package in goland helm kubectl phpstorm pycharm-professional slack webstorm
+sudo snap install spotify
+
+for package in helm kubectl slack
 do
     sudo snap install ${package} --classic
 done
