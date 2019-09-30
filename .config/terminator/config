@@ -1,9 +1,21 @@
 [global_config]
-  use_custom_url_handler = True
   window_state = fullscreen
+  use_custom_url_handler = True
 [keybindings]
   close_term = <Primary>w
   full_screen = <Ctrl><Shift>F11
+[profiles]
+  [[default]]
+    background_color = "#242424"
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_color = "#97979b"
+    font = DejaVuSansMono Nerd Font Mono 10
+    foreground_color = "#eff0eb"
+    show_titlebar = False
+    scrollback_lines = 10000
+    palette = "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -29,15 +41,3 @@
       title = ~
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#242424"
-    background_darkness = 0.9
-    background_type = transparent
-    cursor_color = "#97979b"
-    font = DejaVuSansMono Nerd Font Mono 10
-    foreground_color = "#eff0eb"
-    palette = "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
-    scrollback_lines = 10000
-    show_titlebar = False
-    use_system_font = False
