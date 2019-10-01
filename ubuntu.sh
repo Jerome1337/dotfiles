@@ -10,18 +10,26 @@ sudo apt -y install apt-transport-https \
     go-dep \
     software-properties-common \
     screenfetch \
-    vim
+    vim \
+    wget
 
 # Setup Docker Engine
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable"
+
+# Setup Visual Studio Code
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository \
+    "deb [arch=amd64] https://packages.microsoft.com/repos/vscode \
+    stable main"
 
 sudo apt update
-sudo apt -y install containerd.io \
+sudo apt -y install code \
+    containerd.io \
     docker-ce \
     docker-ce-cli
 

@@ -19,3 +19,5 @@
 [core]
 	editor = vim
 	excludesfile = /home/jerome/.gitignore_global
+[credential]
+	helper = cache --timeout=10800
