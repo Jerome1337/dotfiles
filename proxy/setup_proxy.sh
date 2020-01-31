@@ -2,6 +2,8 @@
 
 if [ -z "$1" ]; then
     echo "No proxy supplied"
+    
+    exit 1
 fi
 
 # Configure Git to use proxy
