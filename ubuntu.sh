@@ -5,6 +5,7 @@ sudo apt -y install apt-transport-https \
     ca-certificates \
     curl \
     fzf \
+    fonts-firacode \
     git \
     gnupg-agent \
     go-dep \
