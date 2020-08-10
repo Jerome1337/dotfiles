@@ -13,7 +13,10 @@ git config --global http.proxy $PROXY_HTTP_URL
 git config --global https.proxy $PROXY_HTTPS_URL
 
 if [[ -f /etc/systemd/system/docker.service.d/http-proxy.conf ]]; then
-    sudo sed -i '/Environment="HTTP_PROXY=/d' /etc/systemd/system/docker.service.d/http-proxy.conf
+    sudo sed -i "/Environment=HTTP_PROXY=/ s@\"\"@\"$PROXY_HTTP_URL\"@" \
+        /etc/systemd/system/docker.service.d/http-proxy.conf
+    sudo sed -i "/Environment=HTTPS_PROXY=/ s@\"\"@\"$PROXY_HTTPS_URL\"@" \
+        /etc/systemd/system/docker.service.d/http-proxy.conf
 
     sudo systemctl daemon-reload
     sudo systemctl restart docker.service

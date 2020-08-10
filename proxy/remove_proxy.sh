@@ -4,7 +4,8 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 if [[ -f /etc/systemd/system/docker.service.d/http-proxy.conf ]]; then
-    sudo sed -i '/Environment="HTTP_PROXY=/d' /etc/systemd/system/docker.service.d/http-proxy.conf
+    sudo sed -i '/Environment=HTTP_PROXY=/ s/"[^"][^"]*"/""/' /etc/systemd/system/docker.service.d/http-proxy.conf
+    sudo sed -i '/Environment=HTTPS_PROXY=/ s/"[^"][^"]*"/""/' /etc/systemd/system/docker.service.d/http-proxy.conf
 
     sudo systemctl daemon-reload
     sudo systemctl restart docker.service
