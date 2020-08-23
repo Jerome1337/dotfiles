@@ -11,8 +11,21 @@ sudo apt -y install apt-transport-https \
     go-dep \
     software-properties-common \
     screenfetch \
+    terminator \
     vim \
     wget
+
+# Install Vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Nerd Fonts Fira Code
+git clone https://github.com/ryanoasis/nerd-fonts \
+    cd nerd-fonts \
+    ./install.sh FiraCode \
+    cd .. \
+    rm -rf nerd-fonts
+
 
 # Setup Docker Engine
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -36,7 +49,6 @@ sudo apt -y install code \
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
 
 sudo systemctl enable docker
 
@@ -83,4 +95,5 @@ fi
 
 ln -sf $HOME/dotfiles/.config/terminator/config $HOME/.config/terminator/config
 
-mkdir $HOME/Documents/Projects
+mkdir -p $HOME/Documents/Projects
+

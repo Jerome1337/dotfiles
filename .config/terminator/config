@@ -10,7 +10,7 @@
     background_darkness = 0.9
     background_type = transparent
     cursor_color = "#97979b"
-    font = DejaVuSansMono Nerd Font Mono 10
+    font = FiraCode Nerd Font Mono 10
     foreground_color = "#eff0eb"
     show_titlebar = False
     scrollback_lines = 10000
