@@ -146,6 +146,11 @@ ln -sf $HOME/dotfiles/lockscreen.sh $HOME/lockscreen.sh
 mkdir $HOME/.config/terminator
 ln -sf $HOME/dotfiles/.config/terminator/config $HOME/.config/terminator/config
 
+for file in $(echo $HOME/dotfiles/.zshrc) $(echo $HOME/dotfiles/.gitconfig)
+do
+    sed -i "" --follow-symlinks 's#<gpg_binary>#'$(which gpg)'#' ${file}
+done
+
 echo static "domain_name_servers=8.8.8.8 1.1.1.1" | sudo tee -a /etc/dhcpcd.conf
 
 sudo chsh -s /bin/zsh $(whoami)

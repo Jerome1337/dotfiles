@@ -10,7 +10,7 @@
 	name = Jérôme Pogeant
 	signingkey = F3FF4145E9ADF771
 [gpg]
-	program = /usr/bin/gpg
+	program = <gpg_binary>
 [commit]
 	gpgsign = true
 [submodule]
