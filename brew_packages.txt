@@ -1,0 +1,17 @@
+docker
+docker-compose
+fzf
+gh
+git
+golang
+google-chrome
+gpg
+homebrew/cask-fonts/font-fira-code-nerd-font
+homebrew/cask-fonts/font-fira-mono-nerd-font
+homebrew/core/minikube
+iterm2
+node
+python3
+screenfetch
+typescript
+zplug
