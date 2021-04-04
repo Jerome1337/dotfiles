@@ -44,6 +44,7 @@ alias projects="cd ~/Documents/Projects"
 prompt_newline='%666v'
 PROMPT=" $PROMPT"
 
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH=<gpg_binary>:$PATH
+export GPG_TTY=$(tty)
 
 screenfetch
