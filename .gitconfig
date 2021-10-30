@@ -5,6 +5,8 @@
 	st = status
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
 	re = rebase
+        p = push
+        pf = "push -f"
 [user]
 	email = p-jerome@hotmail.fr
 	name = Jérôme Pogeant
