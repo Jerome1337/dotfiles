@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 alias gti="git"
+alias g="git"
 alias project="cd ~/Documents/Projects"
 alias projects="cd ~/Documents/Projects"
 
