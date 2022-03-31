@@ -1,3 +1,4 @@
+alacritty
 docker
 docker-compose
 firefox
@@ -10,10 +11,11 @@ gpg
 homebrew/cask-fonts/font-fira-code-nerd-font
 homebrew/cask-fonts/font-fira-mono-nerd-font
 homebrew/core/minikube
-iterm2
 node
 python3
+rectangle
 screenfetch
+tmux
 typescript
 visual-studio-code
 zplug
