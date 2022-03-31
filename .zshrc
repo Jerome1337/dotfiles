@@ -1,4 +1,7 @@
-export ZSH="/home/jerome/.oh-my-zsh"
+if [ "$TMUX" = "" ]; then tmux; fi
+
+export ZSH="$HOME/.oh-my-zsh"
+export FZF_BASE=$(which fzf)
 
 source $HOME/.zplug/init.zsh
 
@@ -8,10 +11,10 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
-zplug "chrissicool/zsh-256color"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", use:pure.zsh, as:theme
 
 LOAD_FLAGS=""
 if ! zplug check --verbose; then
@@ -26,11 +29,12 @@ export UPDATE_ZSH_DAYS=7
 ZSH_THEME=""
 
 plugins=(
-  git
-  fzf
   colorize
-  history
   docker-compose
+  fzf
+  git
+  history
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -48,5 +52,6 @@ PROMPT=" $PROMPT"
 
 export PATH=<gpg_binary>:$PATH
 export GPG_TTY=$(tty)
+export TERM="xterm-256color"
 
 screenfetch
