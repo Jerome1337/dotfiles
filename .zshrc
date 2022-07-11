@@ -46,6 +46,7 @@ alias g="git"
 alias project="cd ~/Documents/Projects"
 alias projects="cd ~/Documents/Projects"
 alias nr="npm run"
+alias vim="nvim"
 
 prompt_newline='%666v'
 PROMPT=" $PROMPT"
