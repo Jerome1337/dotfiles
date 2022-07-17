@@ -6,9 +6,9 @@
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
 	re = rebase
 	f = "fetch --all --prune"
-	pl = pull 
-        p = push
-        pf = "push -f"
+	pl = pull
+	p = push
+	pf = "push -f"
 [user]
 	email = p-jerome@hotmail.fr
 	name = Jérôme Pogeant
@@ -22,7 +22,7 @@
 [color]
 	ui = true
 [core]
-	editor = vim
+	editor = nvim -u ~/.config/nvim/init.vim
 	excludesfile = /home/jerome/.gitignore_global
 	ignorecase = false
 [credential]
