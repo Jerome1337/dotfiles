@@ -27,6 +27,8 @@
 	ignorecase = false
 [credential]
 	helper = store
+[push]
+	autoSetupRemote = true
 [pull]
 	rebase = false
 [rerere]
