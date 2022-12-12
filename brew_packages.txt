@@ -8,8 +8,7 @@ git
 golang
 google-chrome
 gpg
-homebrew/cask-fonts/font-fira-code-nerd-font
-homebrew/cask-fonts/font-fira-mono-nerd-font
+homebrew/cask-fonts/font-fira-code
 homebrew/core/minikube
 node
 python3
