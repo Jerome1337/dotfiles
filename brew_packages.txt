@@ -1,6 +1,5 @@
 alacritty
 docker
-docker-compose
 firefox
 fzf
 gh
@@ -10,10 +9,10 @@ google-chrome
 gpg
 homebrew/cask-fonts/font-fira-code
 homebrew/core/minikube
+neofetch
 node
 python3
 rectangle
-screenfetch
 tmux
 typescript
 visual-studio-code

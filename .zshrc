@@ -18,8 +18,8 @@ zplug "sindresorhus/pure", use:pure.zsh, as:theme
 
 LOAD_FLAGS=""
 if ! zplug check --verbose; then
-	LOAD_FLAGS="--verbose"
-	zplug install
+  LOAD_FLAGS="--verbose"
+  zplug install
 fi
 
 zplug load ${LOAD_FLAGS}
@@ -61,4 +61,4 @@ export PATH=<gpg_binary>:$PATH
 export GPG_TTY=$(tty)
 export TERM="xterm-256color"
 
-screenfetch
+neofetch
