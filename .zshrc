@@ -18,8 +18,8 @@ zplug "sindresorhus/pure", use:pure.zsh, as:theme
 
 LOAD_FLAGS=""
 if ! zplug check --verbose; then
-	LOAD_FLAGS="--verbose"
-	zplug install
+  LOAD_FLAGS="--verbose"
+  zplug install
 fi
 
 zplug load ${LOAD_FLAGS}
