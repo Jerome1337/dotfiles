@@ -33,3 +33,5 @@
 	rebase = false
 [rerere]
 	enabled = true
+[tag]
+	forceSignAnnotated = true
