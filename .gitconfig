@@ -25,6 +25,7 @@
 	editor = nvim -u ~/.config/nvim/init.vim
 	excludesfile = /home/jerome/.gitignore_global
 	ignorecase = false
+	pager = delta
 [credential]
 	helper = store
 [push]
@@ -35,3 +36,13 @@
 	enabled = true
 [tag]
 	forceSignAnnotated = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	light = false
