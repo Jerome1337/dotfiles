@@ -46,3 +46,5 @@
 	navigate = true
 	line-numbers = true
 	light = false
+[sequence]
+	editor = interactive-rebase-tool

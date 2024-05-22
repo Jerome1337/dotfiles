@@ -4,6 +4,7 @@ firefox
 fzf
 gh
 git
+git-interactive-rebase-tool
 golang
 google-chrome
 gpg
