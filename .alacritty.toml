@@ -1,4 +1,5 @@
-shell = { program = "/bin/zsh", args = ["--login"] }
+[terminal]
+  shell = { program = "/bin/zsh", args = ["--login"] }
 
 [env]
   TERM = "xterm-256color"
