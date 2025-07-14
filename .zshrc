@@ -61,4 +61,4 @@ export PATH=<gpg_binary>:$PATH
 export GPG_TTY=$(tty)
 export TERM="xterm-256color"
 
-fastfetch -c $HOME/fastfetch.jsonc
+fastfetch
