@@ -2,7 +2,7 @@
 
 /bin/bash <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
 
-brew install $(<brew_packages.txt)
+brew bundle
 
 if [[ ! -e $HOME/.oh-my-zsh ]]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -28,7 +28,6 @@ ln -sf $HOME/dotfiles/.alacritty.toml $HOME/.alacritty.toml
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/.config/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
-ln -sf $HOME/dotfiles/fastfetch.jsonc $HOME/fastfetch.jsonc
 
 for file in $(echo $HOME/dotfiles/.zshrc) $(echo $HOME/dotfiles/.gitconfig); do
     sed -i "" 's#<gpg_binary>#'$(which gpg)'#' ${file}
