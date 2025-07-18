@@ -15,6 +15,7 @@ brew "visual-studio-code"
 brew "zplug"
 
 cask "avast-security"
+cask "container"
 cask "docker-desktop"
 cask "font-0xproto"
 cask "gpg-suite"
