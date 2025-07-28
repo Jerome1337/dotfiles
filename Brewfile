@@ -12,7 +12,6 @@ brew "zplug"
 
 cask "alacritty"
 cask "cursor"
-cask "avast-security"
 cask "container"
 cask "docker-desktop"
 cask "font-0xproto"
