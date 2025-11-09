@@ -30,8 +30,9 @@
 	helper = store
 [push]
 	autoSetupRemote = true
+	default = upstream
 [pull]
-	rebase = false
+	rebase = true
 [rerere]
 	enabled = true
 [tag]
