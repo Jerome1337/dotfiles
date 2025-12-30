@@ -14,19 +14,42 @@ zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure", use:pure.zsh, as:theme
+zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+
+export UPDATE_ZSH_DAYS=7
+
+SPACESHIP_PROMPT_ORDER=(
+  time
+  user
+  dir
+  host
+  git
+  package
+  node
+  bun
+  deno
+  golang
+  docker
+  docker_compose
+  kubectl
+  exec_time
+  async
+  line_sep
+  battery
+  jobs
+  exit_code
+  sudo
+  char
+)
 
 LOAD_FLAGS=""
+
 if ! zplug check --verbose; then
   LOAD_FLAGS="--verbose"
   zplug install
 fi
 
 zplug load ${LOAD_FLAGS}
-
-export UPDATE_ZSH_DAYS=7
-
-ZSH_THEME=""
 
 plugins=(
   colorize
@@ -60,5 +83,7 @@ PROMPT=" $PROMPT"
 export PATH=<gpg_binary>:$PATH
 export GPG_TTY=$(tty)
 export TERM="xterm-256color"
+
+export PATH="$HOME/.volta/bin:$PATH"
 
 fastfetch
