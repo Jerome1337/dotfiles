@@ -7,9 +7,9 @@
 [window]
   opacity = 0.95
   dynamic_title = true
-  decorations = "Full"
+  decorations = "Buttonless"
   startup_mode = "Windowed"
-  dimensions = { columns = 140, lines = 38 }
+  dimensions = { columns = 200, lines = 50 }
 
 [scrolling]
   history = 50000
@@ -22,16 +22,30 @@
   style = { shape = "Block", blinking = "Off" }
   thickness = 0.15
 
-# Colors (Rosé Pine Theme)
-[colors]
-  draw_bold_text_with_bright_colors = true
-  primary = { background = "#1E1E3F", foreground = "#FFFFFF" }
-  cursor = { text = "#1E1E3F", cursor = "#FAD000" }
-  vi_mode_cursor = { text = "0xe0def4", cursor = "0x524f67" }
-  line_indicator = { foreground = "None", background = "None" }
-  selection = { text = "0xe0def4", background = "0x403d52" }
-  normal = { black = "#000000", red = "#D52822", green = "#3DB72A", yellow = "#FAD000", blue = "#6943FF", magenta = "#FF628C", cyan = "#9EFFFF", white = "#DBDBE0" }
-  bright = { black = "#5C5C61", red = "#FF000D", green = "#3AD900", yellow = "#FAD000", blue = "#6943FF", magenta = "#FF628C", cyan = "#9EFFFF", white = "#FFFFFF" }
+# Colors (Tokyo Night Storm)
+[colors.bright]
+black = "#444b6a"
+blue = "#7da6ff"
+cyan = "#0db9d7"
+green = "#b9f27c"
+magenta = "#bb9af7"
+red = "#ff7a93"
+white = "#acb0d0"
+yellow = "#ff9e64"
+
+[colors.normal]
+black = "#32344a"
+blue = "#7aa2f7"
+cyan = "#449dab"
+green = "#9ece6a"
+magenta = "#ad8ee6"
+red = "#f7768e"
+white = "#9699a8"
+yellow = "#e0af68"
+
+[colors.primary]
+background = "#24283b"
+foreground = "#a9b1d6"
 
 [colors.hints]
     start = { foreground = "#908caa", background = "#1f1d2e" }
