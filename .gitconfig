@@ -1,7 +1,9 @@
 [alias]
 	co = checkout
+	cob = "checkout -b"
 	br = branch
 	ci = commit
+	cia = "commit --amend"
 	st = status
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -D"
 	re = rebase
